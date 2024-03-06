@@ -1,0 +1,126 @@
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: unset;
+}
+
+.links-section {
+    flex: 2 0 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--input-color);
+    overflow-y: scroll;
+    direction: ltr;
+}
+
+.links-section .item-link {
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    color: var(--black-color);
+    transition: all .3s ease;
+}
+
+.links-section .item-link .category-title {
+    font-size: 12px;
+    color: var(--black-color);
+    transition: all .3s ease;
+}
+
+.links-section .active{
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.links-section .active .category-title {
+    color: var(--main-color);
+}
+
+.links-section .item-link:hover,
+.item-link:hover .category-title {
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+
+.links-section .item-link span {
+    font-size: 14px;
+}
+
+.links-content {
+    flex: 8 0 0;
+    background-color: #fff;
+    overflow-y: scroll;
+    direction: ltr;
+}
+
+.link {
+    display: none;
+    direction: rtl;
+}
+
+.show {
+    display: block;
+}
+
+.title-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 10px;
+    font-size: 12px;
+    color: #008eb2;
+}
+
+.title-box p {
+    font-weight: 600;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.content-box {
+    columns: 3;
+    column-gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.content-box .list-box {
+    margin-bottom: 1rem;
+    break-inside: avoid-column;
+}
+
+.content-box .list-box .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #222;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3px;
+    padding: .5rem 0;
+}
+
+.content-box .list-box .label::before {
+    content: "";
+    width: 2px;
+    height: 15px;
+    background-color: red;
+    margin-left: 5px;
+}
+
+.content .list-box li {
+    padding: 0.3rem 0;
+}
+
+.content-box .list-box .item {
+    font-size: 12px;
+    color: var(--gray-color);
+}

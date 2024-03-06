@@ -1,0 +1,356 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: var(--bottom-shadow);
+    z-index: 999;
+    background-color: var(--white-color);
+}
+
+header .header-banner {
+    width: 100%;
+    height: 60px;
+}
+
+header .header-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-actions {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-search .logo {
+    width: 115px;
+    height: 30px;
+}
+
+.logo a img {
+    display: grid;
+}
+
+.search-box {
+    width: 600px;
+    height: 45px;
+    position: relative;
+}
+
+.search-box svg {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 0 3rem 0 1rem;
+    font-size: 1rem;
+    background-color: var(--input-color);
+}
+
+.user-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-login-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--black-color);
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    cursor: pointer;
+    transition: all 250ms;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-login-signup:hover,
+.btn-login-signup:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: #0000001a 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.btn-login-signup:hover {
+    transform: translateY(-1px);
+}
+
+.btn-login-signup:active {
+    background-color: #f0f0f1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: #000000a6;
+    transform: translateY(0);
+}
+
+.btn-login-signup svg {
+    color: #000000a6;
+}
+
+.btn-login-signup:active + svg {
+    color: #000000a6;
+}
+
+.user-actions .separator {
+    width: 1px;
+    height: 25px;
+    background-color: var(--border-color);
+}
+
+.btn-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    padding: 8px;
+    color: var(--black-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.shopping-icon {
+    color: var(--black-color);
+    font-size: 1.5rem;
+}
+
+.shopping-icon:hover + span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: -99;
+    opacity: 0.4;
+}
+
+.btn-cart .badge-cart {
+    width: 12px;
+    height: 12px;
+    background-color: var(--border-color);
+    border-radius: 6px;
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    z-index: -98;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+
+.badge-cart.active {
+    background-color: var(--main-color);
+    opacity: 0.8;
+}
+
+.header-nav {
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav nav {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.megamenu {
+    width: auto;
+    height: 100%;
+}
+
+.btn-megamenu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0 0.5rem;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-megamenu::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #ee384e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.btn-megamenu:hover::after {
+    width: 100%;
+}
+
+.btn-megamenu .bi-icons {
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+
+.btn-megamenu span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.158), 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 0 10px;
+    background-color: #fff;
+}
+
+.megamenu:hover .dropdown-content {
+    display: block;
+}
+
+nav .separator {
+    width: 1px;
+    height: 20px;
+    background-color: var(--border-color);
+}
+
+.nav-menu {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-menu li {
+    height: 100%;
+}
+
+.nav-menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 0rem 0.5rem;
+    height: 100%;
+    width: auto;
+    position: relative;
+}
+
+.nav-menu-link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #ee384e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-menu-link:hover::after {
+    width: 100%;
+}
+
+.nav-menu-link span {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+}
+
+.ci-icons {
+    font-size: 1.2rem;
+    color: var(--placeholder-color);
+}
+
+.btn-select-location {
+    width: 20%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-select-location .location-icon {
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+
+.btn-select-location span {
+    color: var(--black-color);
+    font-size: 0.8rem;
+}
+
+.main-section{
+    width: 100%;
+    margin-top: 200px;
+}
+
+.main-section .main-slider{
+    width: 100%;
+    height: 400px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--gray-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
